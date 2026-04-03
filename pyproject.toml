@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "distill-context"
+version = "0.1.0"
+description = "Information-theoretic context compression for LLMs"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [{name = "Amado Alvarez Sueiras"}]
+keywords = ["llm", "context", "compression", "entropy", "information-theory", "token", "tfidf", "rate-distortion"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Linguistic",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/amadoalvarez/distill"
+Repository = "https://github.com/amadoalvarez/distill"
+Issues = "https://github.com/amadoalvarez/distill/issues"
+
+[project.scripts]
+distill = "distill:main"
+
+[tool.setuptools]
+py-modules = ["distill"]
+
+[tool.pytest.ini_options]
+testpaths = ["test_distill.py"]
+addopts = "-v"
